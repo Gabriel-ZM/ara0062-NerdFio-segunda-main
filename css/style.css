@@ -1,10 +1,8 @@
 /* css/style.css
-   NerdFio — CSS externo para a Entrega 2
-   Paleta: --cor-escuro, --cor-primaria, --cor-accento, --cor-fundo, --cor-texto-secundario
-   Fontes: Montserrat (títulos) e Inter (corpo) - link no <head> dos HTML
+   NerdFio — CSS externo para a Entrega 2 & 3
+   Paleta clara + tema dark neon cyberpunk.
+   Fontes: Montserrat (títulos) e Inter (corpo)
 */
-
-/* Variáveis de cores */
 :root{
   --cor-escuro: #0B1020;
   --cor-primaria: #7C5CFF;
@@ -12,7 +10,6 @@
   --cor-fundo: #F6F7FB;
   --cor-texto: #333333;
   --cor-texto-secundario: #9AA3B2;
-
   --radius-default: 8px;
   --gap: 12px;
 }
@@ -26,10 +23,10 @@ body{
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   line-height:1.45;
   font-size:16px;
-  padding-bottom: 80px; /* espaço pro footer fixo se houver */
+  padding-bottom: 80px;
 }
 
-/* ===== Nav (exemplo de link aplicado) ===== */
+/* Nav */
 nav{
   background:var(--cor-escuro);
   padding:14px 18px;
@@ -43,8 +40,7 @@ nav a{
 }
 nav a:hover{ color: var(--cor-accento); text-decoration:underline; }
 
-/* ===== ID exigido (1 seletor #id) ===== */
-/* Aplicar id="main-header" no <h1> da home para cumprir seletor id */
+/* ID main-header */
 #main-header {
   font-family: "Montserrat", sans-serif;
   color: var(--cor-primaria);
@@ -54,44 +50,16 @@ nav a:hover{ color: var(--cor-accento); text-decoration:underline; }
   text-align: center;
 }
 
-/* ===== Seletores de elemento (mínimo 3) ===== */
-/* 1) h1 (tag) */
-h1 { /* caso algum h1 não use id */
-  font-family: "Montserrat", sans-serif;
-  color: var(--cor-primaria);
-  font-size: 2.6rem;
-  margin: 10px 0;
-}
+/* Tag selectors */
+h1 { font-family: "Montserrat", sans-serif; color: var(--cor-primaria); font-size: 2.6rem; margin: 10px 0; }
+p { color: var(--cor-texto); margin: 8px 0 14px 0; }
+li { margin-bottom: 8px; color: var(--cor-texto); }
 
-/* 2) p (tag) */
-p {
-  color: var(--cor-texto);
-  margin: 8px 0 14px 0;
-}
+h2 { font-family: 'Montserrat', sans-serif; color: var(--cor-escuro); font-size: 1.5rem; margin: 12px 0; }
 
-/* 3) li (tag) */
-li {
-  margin-bottom: 8px;
-  color: var(--cor-texto);
-}
-
-/* ===== Cabeçalhos secundários ===== */
-h2 {
-  font-family: "Montserrat", sans-serif;
-  color: var(--cor-escuro);
-  font-size: 1.5rem;
-  margin: 12px 0;
-}
-
-/* ===== Links (a) ===== */
-a {
-  color: var(--cor-primaria);
-  text-decoration: none;
-  transition: color .15s ease, transform .08s ease;
-}
+a { color: var(--cor-primaria); text-decoration: none; transition: color .15s ease, transform .08s ease; }
 a:hover { color: var(--cor-accento); transform: translateY(-1px); text-decoration: underline; }
 
-/* ===== Tabela (th, td) ===== */
 table {
   width:100%;
   border-collapse: collapse;
@@ -100,50 +68,15 @@ table {
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(11,16,32,0.06);
 }
-th, td {
-  padding: 12px 10px;
-  border-bottom: 1px solid #e8e8ee;
-  text-align: center;
-  font-size: 0.95rem;
-}
-/* th (elemento) */
-th {
-  background: linear-gradient(90deg, var(--cor-primaria), #6d4dff);
-  color: var(--cor-fundo);
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: .6px;
-}
-/* td (elemento) */
+th, td { padding: 12px 10px; border-bottom: 1px solid #e8e8ee; text-align: center; font-size: 0.95rem; }
+th { background: linear-gradient(90deg, var(--cor-primaria), #6d4dff); color: var(--cor-fundo); font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-size: 0.85rem; letter-spacing: .6px; }
 td { color: var(--cor-texto); }
 
-/* ===== Imagens (img) ===== */
-/* aplica estilos a todas as imagens - elemento */
-img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 6px 14px rgba(11,16,32,0.06);
-}
+img { display: inline-block; max-width: 100%; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 6px 14px rgba(11,16,32,0.06); }
 
-/* ===== Labels (label) ===== */
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom:6px;
-  color: var(--cor-escuro);
-  font-family: "Montserrat", sans-serif;
-}
+label { display: block; font-weight: 600; margin-bottom:6px; color: var(--cor-escuro); font-family: "Montserrat", sans-serif; }
 
-/* ===== Inputs e textarea (elementos) ===== */
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
   width: 100%;
   padding: 10px 12px;
   border-radius: 6px;
@@ -154,17 +87,9 @@ textarea {
   color: var(--cor-texto);
   transition: border-color .12s ease, box-shadow .12s ease;
 }
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: var(--cor-primaria);
-  box-shadow: 0 6px 18px rgba(124,92,255,0.12);
-}
+input:focus, textarea:focus, select:focus { outline: none; border-color: var(--cor-primaria); box-shadow: 0 6px 18px rgba(124,92,255,0.12); }
 
-/* ===== Botões (elemento button) ===== */
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
+button, input[type="button"], input[type="submit"], input[type="reset"] {
   cursor: pointer;
   padding: 10px 16px;
   border-radius: 8px;
@@ -175,17 +100,9 @@ input[type="reset"] {
   color: var(--cor-fundo);
   transition: transform .08s ease, box-shadow .12s ease;
 }
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(11,16,32,0.08); }
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(11,16,32,0.08); }
+input[type="reset"] { background: var(--cor-accento); }
 
-/* botão de reset com cor de destaque (usar classe .btn-reset ou input[type=reset]) */
-input[type="reset"] {
-  background: var(--cor-accento);
-}
-
-/* ===== Seletores de classe (mínimo 2) ===== */
-/* .btn — use em links ou botões para estilo consistente */
 .btn {
   display: inline-block;
   padding: 10px 14px;
@@ -197,43 +114,35 @@ input[type="reset"] {
   font-family: "Montserrat", sans-serif;
 }
 
-/* .card — cartão genérico para produtos, equipe etc */
 .card {
   background: #fff;
   border-radius: var(--radius-default);
   padding: 14px;
   box-shadow: 0 8px 20px rgba(11,16,32,0.05);
   margin-bottom: 14px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ===== Auxiliares / layout rápido ===== */
-.container {
-  max-width: 1100px;
-  margin: 18px auto;
-  padding: 0 18px;
+.container { max-width: 1100px; margin: 18px auto; padding: 0 18px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gap); }
+
+.badge { display:inline-block; padding:4px 8px; border-radius:999px; font-size:0.8rem; background: var(--cor-accento); color: #fff; font-weight:700; }
+
+@media (max-width:700px){ th, td { font-size: 0.85rem; padding: 8px; } nav { padding: 10px; } #main-header, h1 { font-size: clamp(1.6rem, 6vw, 2rem); } }
+
+/* Tema dark neon cyberpunk */
+:root[data-theme="dark"],
+[data-theme="dark"] {
+  --cor-fundo: #05050a;
+  --cor-escuro: #e9e5ff;
+  --cor-primaria: #b400ff;
+  --cor-accento: #ff4d6d;
+  --cor-texto: #e6e6ff;
+  --cor-texto-secundario: #b8aaff;
 }
 
-/* grid simples para cards */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--gap);
-}
-
-/* destaque de estoque baixo (badge) */
-.badge {
-  display:inline-block;
-  padding:4px 8px;
-  border-radius:999px;
-  font-size:0.8rem;
-  background: var(--cor-accento);
-  color: #fff;
-  font-weight:700;
-}
-
-/* responsividade simples */
-@media (max-width:700px){
-  th, td { font-size: 0.85rem; padding: 8px; }
-  nav { padding: 10px; }
-  #main-header, h1 { font-size: clamp(1.6rem, 6vw, 2rem); }
-}
+/* small helper for input error message */
+.input-error { margin-top:6px; }

@@ -146,3 +146,42 @@ input[type="reset"] { background: var(--cor-accento); }
 
 /* small helper for input error message */
 .input-error { margin-top:6px; }
+
+/* Correção tipografia dark — texto estava preto e sumindo */
+[data-theme="dark"] body,
+[data-theme="dark"] p,
+[data-theme="dark"] td,
+[data-theme="dark"] th,
+[data-theme="dark"] label,
+[data-theme="dark"] li,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] .card,
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  color: var(--cor-texto) !important;
+  background-color: transparent;
+}
+
+/* tabela dark */
+[data-theme="dark"] table {
+  background-color: #111 !important;
+  border-color: #222 !important;
+}
+[data-theme="dark"] td {
+  border-bottom: 1px solid #272727 !important;
+}
+
+/* card dark */
+[data-theme="dark"] .card{
+  background:#0c0c12 !important;
+  border:1px solid #2f2f3d;
+}
+
+/* inputs dark */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background:#12121a !important;
+  border:1px solid #3f2a5a !important;
+}

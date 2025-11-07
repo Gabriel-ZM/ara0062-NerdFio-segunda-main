@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>NerdFio — Loja</title>
 
   <!-- Google Fonts -->
@@ -14,14 +14,20 @@
 <body>
   <nav>
     <a href="index.html">Home</a>
-    <a href="loja.html">Loja</a>
+    <a href="loja.html" aria-current="page">Loja</a>
     <a href="contato.html">Contato</a>
     <a href="equipe.html">Equipe</a>
+
+    <!-- botão de tema (ícone) -->
+    <button id="theme-toggle" aria-label="Alternar tema" style="float:right; background:transparent; border:none; font-size:1.1rem; cursor:pointer;">
+      🌙
+    </button>
   </nav>
 
-  <div class="container">
+  <main class="container" role="main">
     <h2>Loja NerdFio — Nossa coleção</h2>
 
+    <!-- tabela com tbody VAZIO; será preenchida por js/carrega_dados.js -->
     <table>
       <thead>
         <tr>
@@ -34,52 +40,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><img src="images/pixel_potion.jpg" alt="Pixel Potion Tee"></td>
-          <td>Pixel Potion Tee</td>
-          <td>Poção em pixel art — vibe RPG.</td>
-          <td>P, M, G</td>
-          <td>79,90</td>
-          <td>12</td>
-        </tr>
-        <tr>
-          <td><img src="images/retro_console.jpg" alt="Retro Console Tee"></td>
-          <td>Retro Console Tee</td>
-          <td>Estampa console vintage minimal.</td>
-          <td>M, G, GG</td>
-          <td>69,90</td>
-          <td>20</td>
-        </tr>
-        <tr>
-          <td><img src="images/for_loop.jpg" alt="For Loop Tee"></td>
-          <td>For Loop Tee</td>
-          <td>Texto: <code>for(;;)</code> estilizado.</td>
-          <td>P, M, G</td>
-          <td>74,90</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td><img src="images/robotogram.jpg" alt="Robotogram Tee"></td>
-          <td>Robotogram Tee</td>
-          <td>Robô geométrico com glitch art.</td>
-          <td>M, G</td>
-          <td>84,90</td>
-          <td>6</td>
-        </tr>
-        <tr>
-          <td><img src="images/mana_runic.jpg" alt="Mana Runic Tee"></td>
-          <td>Mana Runic Tee</td>
-          <td>Símbolos inspirados — estilo runa.</td>
-          <td>P, M, G, GG</td>
-          <td>89,90</td>
-          <td>4 <span class="badge">Edição limitada</span></td>
-        </tr>
+        <!-- VAZIO: carrega_dados.js deverá popular este tbody -->
       </tbody>
     </table>
-  </div>
+  </main>
 
   <footer style="margin-top:40px; text-align:center; background:var(--cor-escuro); color:var(--cor-fundo); padding:20px;">
     &copy; 2025 NerdFio
   </footer>
+
+  <!-- SCRIPTS: tema.js disponível em todas as páginas; carrega_dados.js somente aqui -->
+  <script src="js/tema.js"></script>
+  <script src="js/carrega_dados.js"></script>
 </body>
 </html>

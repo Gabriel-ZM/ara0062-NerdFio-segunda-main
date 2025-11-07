@@ -1,0 +1,42 @@
+[
+  {
+    "img": "images/pixel_potion.jpg",
+    "produto": "Camisa Pixel Potion",
+    "desc": "Poção em pixel art — vibe RPG.",
+    "tam": "P, M, G",
+    "preco": "79,90",
+    "estoque": 12
+  },
+  {
+    "img": "images/retro_console.jpg",
+    "produto": "Camisa de Console Retro",
+    "desc": "Estampa console vintage.",
+    "tam": "M, G, GG",
+    "preco": "69,90",
+    "estoque": 20
+  },
+  {
+    "img": "images/for_loop.jpg",
+    "produto": "Camisa For Loop",
+    "desc": "Texto: for(;;) estilizado.",
+    "tam": "P, M, G",
+    "preco": "74,90",
+    "estoque": 8
+  },
+  {
+    "img": "images/robotogram.jpg",
+    "produto": "Camisa de robo",
+    "desc": "Robô geométrico com glitch art.",
+    "tam": "M, G",
+    "preco": "84,90",
+    "estoque": 6
+  },
+  {
+    "img": "images/mana_runic.jpg",
+    "produto": "Camisa The Witcher",
+    "desc": "Símbolos inspirados — estilo runa.",
+    "tam": "P, M, G, GG",
+    "preco": "89,90",
+    "estoque": 4
+  }
+]

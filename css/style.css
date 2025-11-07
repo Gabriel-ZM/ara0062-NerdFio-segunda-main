@@ -185,3 +185,22 @@ input[type="reset"] { background: var(--cor-accento); }
   background:#12121a !important;
   border:1px solid #3f2a5a !important;
 }
+
+/* tabela adaptada para tema dark também */
+[data-theme="dark"] table {
+  background: #0d0d14;               /* fundo escuro cyber */
+  color: var(--cor-texto);
+}
+
+[data-theme="dark"] th {
+  background: linear-gradient(90deg, var(--cor-primaria), #8d00ff);
+}
+
+[data-theme="dark"] td {
+  border-bottom: 1px solid #2b2b3a;
+}
+
+[data-theme="dark"] .badge {
+  background: var(--cor-accento);
+  color:#fff;
+}

@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function(){
   const tbody = document.querySelector("table tbody");
   if(!tbody) return;
-  fetch("dados.json")
+  fetch("./dados.json")
     .then(resp => {
       if(!resp.ok) throw new Error("Falha ao carregar dados.json");
       return resp.json();
